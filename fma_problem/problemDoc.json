@@ -1,0 +1,40 @@
+{
+  "about": {
+    "problemID": "fma_problem_TRAIN",
+    "problemName": "Music genre classification problem",
+    "problemDescription": "This is a multiclass classification problem, where given a music it is required to classified the genre of the song.",
+    "taskType": "classification",
+    "taskSubType": "multiClass",
+    "problemSchemaVersion": "3.2.0",
+    "problemVersion": "2.0"
+  },
+  "inputs": {
+    "data": [
+      {
+        "datasetID": "fma_dataset_TRAIN",
+        "targets": [
+          {
+            "targetIndex": 0,
+            "resID": "learningData",
+            "colIndex": 4,
+            "colName": "class"
+          }
+        ]
+      }
+    ],
+    "dataSplits": {
+      "method": "holdOut",
+      "testSize": 0.1,
+      "numRepeats": 0,
+      "splitsFile": "dataSplits.csv"
+    },
+    "performanceMetrics": [
+      {
+        "metric": "accuracy"
+      }
+    ]
+  },
+  "expectedOutputs": {
+    "predictionsFile": "predictions.csv"
+  }
+}
