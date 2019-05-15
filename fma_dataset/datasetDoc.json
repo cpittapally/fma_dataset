@@ -1,0 +1,81 @@
+{
+  "about": {
+    "datasetID": "fma_dataset_TRAIN",
+    "datasetName": "fma dataset",
+    "description": "The data consists small subset of raw music files. The audio files have different bit rate and length. All are mp3 format",
+    "citation": "\n@inproceedings{fma_dataset,\nAuthor = {Defferrard, Micha\"el and Benzi, Kirell and Vandergheynst, Pierre and Bresson, Xavier},\nBooktitle = {18th International Society for Music Information Retrieval Conference},\nTitle = {FMA: A Dataset for Music Analysis},\nYear = {2017}}\n",
+    "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0).",
+    "source": "MIT license",
+    "sourceURI": "https://github.com/mdeff/fma",
+    "approximateSize": "7.2 GB",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0"
+  },
+  "dataResources": [
+    {
+      "resID": "0",
+      "resPath": "media/",
+      "resType": "audio",
+      "resFormat": [
+        "audio/mpeg"
+      ],
+      "isCollection": true
+    },
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "filename",
+          "colType": "string",
+          "role": [
+            "attribute"
+          ],
+          "refersTo": {
+            "resID": "0",
+            "resObject": "item"
+          }
+        },
+        {
+          "colIndex": 2,
+          "colName": "start",
+          "colType": "integer",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "end",
+          "colType": "integer",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}
